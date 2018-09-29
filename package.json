@@ -1,0 +1,25 @@
+{
+  "name": "cronidol",
+  "version": "1.0.0",
+  "description": "this job with cron idol every where",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellotoan1203/CronIdol.git"
+  },
+  "author": "Ngo Huu Toan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hellotoan1203/CronIdol/issues"
+  },
+  "homepage": "https://github.com/hellotoan1203/CronIdol#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "firebase": "^5.5.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
