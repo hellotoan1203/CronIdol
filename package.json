@@ -18,6 +18,7 @@
   "homepage": "https://github.com/hellotoan1203/CronIdol#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "cron": "^1.4.1",
     "firebase": "^5.5.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
