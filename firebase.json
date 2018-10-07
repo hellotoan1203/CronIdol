@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "public": "index.js",
+    "rewrites": [ {
+      "source": "/bigben", "function": "bigben"
+    } ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
