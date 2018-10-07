@@ -20,7 +20,7 @@ router.get('/idols',(req,res)=>{
             snap.forEach((value) => {
                 data.push({id: i++, name: value.val().name});
             });
-            res.send(JSON.stringify(data));
+            res.send(data);
             res.end();
         })
     }else{
@@ -30,7 +30,7 @@ router.get('/idols',(req,res)=>{
             snap.forEach((value) => {
                 data.push({id: i++, name: value.val().name});
             });
-            res.send(JSON.stringify(data));
+            res.send(data);
             res.end();
         })
     }
