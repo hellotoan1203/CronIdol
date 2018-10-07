@@ -45,7 +45,7 @@ router.get('/idols/all',(req,res)=>{
             i++;
             data.push({id: i++,name: value.val().name});
         })
-        res.send(JSON.stringify(data));
+        res.send(data);
         res.end();
     })
 })
