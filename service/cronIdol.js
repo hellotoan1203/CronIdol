@@ -3,17 +3,18 @@ const cheerio = require("cheerio");
 
 
 //get Idol Name
-getNameIdol = (url) => {
+getNameIdol = (url,ref) => {
   request(url).then(body => {
     $ = cheerio.load(body);   
     $("h5.text-center > a").each((i, e) => {
-       ref.push(e['attribs']['href'].split('/')[2]);
+       idol=e['attribs']['href'].split('/')[2]
+       ref.push(idol);
     });
   });
 };
 
 //excute crawler data from page
-getPage = () => {
+getPage = (ref) => {
   request("https://javmodel.com/jav/homepages.php")
     .then(body => {
       $ = cheerio.load(body);
@@ -27,13 +28,16 @@ getPage = () => {
     })
     .then(urls => {
         urls.forEach(elem=>{
-            getNameIdol(elem);
+            getNameIdol(elem,ref);
         })
     });
 };
+//get Idol infomation
+
+
 module.exports.idolCron = (ref)=>{
   ref.remove().then(()=>{
-      getPage();
+      getPage(ref);
   })
 }
 
